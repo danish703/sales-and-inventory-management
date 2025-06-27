@@ -44,13 +44,13 @@ class Profile(models.Model):
         null=True, blank=True, verbose_name='Telephone'
     )
     email = models.EmailField(
-        max_length=150, blank=True, null=True, verbose_name='Email'
+        max_length=150, blank=True, null=True,unique=True, verbose_name='Email'
     )
     first_name = models.CharField(
-        max_length=30, blank=True, verbose_name='First Name'
+        max_length=30, blank=False, verbose_name='First Name'
     )
     last_name = models.CharField(
-        max_length=30, blank=True, verbose_name='Last Name'
+        max_length=30, blank=False, verbose_name='Last Name'
     )
     status = models.CharField(
         choices=STATUS_CHOICES,
