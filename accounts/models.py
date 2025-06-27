@@ -33,6 +33,7 @@ class Profile(models.Model):
         verbose_name='Account ID',
         populate_from='email'
     )
+    
     profile_picture = ProcessedImageField(
         default='profile_pics/default.jpg',
         upload_to='profile_pics',
